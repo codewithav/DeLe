@@ -5,10 +5,10 @@
   font-family: "Merriweather", Georgia, serif;
 }
 
-body {
+/* body {
   background-color: #f0e6d3;
   line-height: 1.6;
-}
+} */
 
 .navbar {
   display: flex;
