@@ -1,117 +1,89 @@
-<!-- Main Dynamic Content Container -->
-<main class="container">
-  <h2>Popular Rentals</h2>
-  
-  <div id="listings" class="listings-grid">
-    
-    <!-- Item Card 1 -->
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop&q=60"
-        alt="Chair and Lamp"
-      />
-      <div class="card-detail">
-        <h3 class="card-title">Chair and Lamp</h3>
-        <p class="card-price" data-price="350">₹350 / day</p>
-        <button class="card-button">Book Now</button>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeLe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">DeLe</div>
+      <div class="Listing">
+        <a href="#">Browse</a>
+        <a href="#">List Item</a>
+        <button
+          class="button-primary"
+          style="padding: 5px 15px; margin-left: 10px"
+        >
+          Login
+        </button>
       </div>
-    </div>
+    </nav>
 
-    <!-- Item Card 2 -->
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=60"
-        alt="DSLR Camera"
-      />
-      <div class="card-detail">
-        <h3 class="card-title">DSLR Camera</h3>
-        <p class="card-price" data-price="1200">₹1,200 / day</p>
-        <button class="card-button">Book Now</button>
+    <header class="main">
+      <h1>Don't Buy. DeLe it.</h1>
+      <p>Rent gadgets, tools, and gear from your neighbors.</p>
+      <div class="search-box">
+        <input
+          type="text"
+          id="search"
+          placeholder="What do you need? (e.g., Camera, Projector)"
+        />
+        <button>Search</button>
       </div>
-    </div>
+    </header>
 
-    <!-- Item Card 3 -->
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1631635589499-afd87d52bf64?w=600&auto=format&fit=crop&q=60"
-        alt="Camping Tent"
-      />
-      <div class="card-detail">
-        <h3 class="card-title">Camping Tent</h3>
-        <p class="card-price" data-price="750">₹750 / day</p>
-        <button class="card-button">Book Now</button>
-      </div>
-    </div>
-
-    <!-- Item Card 4 -->
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1528395874238-34ebe249b3f2?w=600&auto=format&fit=crop&q=60"
-        alt="Projector"
-      />
-      <div class="card-detail">
-        <h3 class="card-title">Projector 1080p</h3>
-        <p class="card-price" data-price="900">₹900 / day</p>
-        <button class="card-button">Book Now</button>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<!-- Authentic Checkout Modal -->
-<div id="bookingModal" class="modal-overlay">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    
-    <h2>Confirm Your Rental</h2>
-    <p class="modal-subtitle">Review your item details and provide confirmation parameters below.</p>
-    
-    <div class="checkout-layout">
-      <!-- Left Column: Form -->
-      <form id="checkoutForm" class="checkout-form">
-        <div class="form-group">
-          <label for="renterName">Full Name</label>
-          <input type="text" id="renterName" required placeholder="Jane Doe">
+    <main class="container">
+      <h2>Popular Rentals</h2>
+      <div id="lists" class="listings">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww"
+            alt="Chair and Lamp"
+          />
+          <div class="card_detail">
+            <h3 class="card_title">Chair and Lamp</h3>
+            <p class="card_price">₹350 / day</p>
+            <button class="card_button">Book Now</button>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="renterEmail">Email Address</label>
-          <input type="email" id="renterEmail" required placeholder="jane@example.com">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtZXJhJTIwZHNscnxlbnwwfHwwfHx8MA%3D%3D"
+            alt="DSLR Camera"
+          />
+          <div class="card_detail">
+            <h3 class="card_title">DSLR Camera</h3>
+            <p class="card_price">₹1200 / day</p>
+            <button class="card_button">Book Now</button>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="rentalDays">Duration (Days)</label>
-          <input type="number" id="rentalDays" min="1" value="3" required>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1631635589499-afd87d52bf64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FtcGluZyUyMHRlbnR8ZW58MHx8MHx8fDA%3D"
+            alt="Camping Tent"
+          />
+          <div class="card_detail">
+            <h3 class="card_title">Camping Tent</h3>
+            <p class="card_price">₹750 / day</p>
+            <button class="card_button">Book Now</button>
+          </div>
         </div>
-        <button type="submit" class="submit-booking-btn">Authorize Payment</button>
-      </form>
-
-      <!-- Right Column: Breakdown Summary -->
-      <div class="billing-summary">
-        <h3>Receipt Summary</h3>
-        <div class="summary-row">
-          <span>Selected Item:</span>
-          <strong id="summaryItemName">-</strong>
-        </div>
-        <div class="summary-row">
-          <span>Rate Per Day:</span>
-          <span id="summaryRate">₹0.00</span>
-        </div>
-        <hr>
-        <div class="summary-row">
-          <span>Rental Subtotal:</span>
-          <span id="summarySubtotal">₹0.00</span>
-        </div>
-        <div class="summary-row">
-          <span>Security Deposit (Refundable):</span>
-          <span>₹500.00</span>
-        </div>
-        <hr>
-        <div class="summary-row total-row">
-          <span>Estimated Total Due:</span>
-          <strong id="summaryGrandTotal">₹0.00</strong>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1528395874238-34ebe249b3f2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvamVjdG9yfGVufDB8fDB8fHww"
+            alt="Projector"
+          />
+          <div class="card_detail">
+            <h3 class="card_title">Projector 1080p</h3>
+            <p class="card_price">₹900 / day</p>
+            <button class="card_button">Book Now</button>
+          </div>
         </div>
       </div>
-    </div>
-
-  </div>
-</div>
+    </main>
+    <script src="Script.js"></script>
+  </body>
+</html>
